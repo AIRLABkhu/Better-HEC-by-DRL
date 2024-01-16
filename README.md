@@ -36,5 +36,5 @@ python3 python/test_policies/RL_algo_test_kinova_discrete_sac.py
 
 Our code is based on the following repositories:
 
-- [Discrete SAC] (https://github.com/BY571/SAC_discrete)
-- [Learn-to-Calibrate] (https://github.com/ethz-asl/Learn-to-Calibrate/tree/master?tab=readme-ov-file)
+- [Discrete SAC](https://github.com/BY571/SAC_discrete)
+- [Learn-to-Calibrate](https://github.com/ethz-asl/Learn-to-Calibrate/tree/master?tab=readme-ov-file)
