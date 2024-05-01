@@ -28,11 +28,7 @@ cd robot_ws/src/hec
 python3 python/test_policies/RL_algo_test_kinova_discrete_sac.py
 ```
 
-## 3. Gazebo Simulation
-
-- Gazebo simulation will be comming soon!
-
-## 4. Code reference:
+## 3. Code reference:
 
 Our code is based on the following repositories:
 
