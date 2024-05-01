@@ -17,6 +17,8 @@ catkin build
 ```
 ## 2. Running the code
 
+Integrate with your simulation to train and test the policy.
+   
 ### 2.1 Training
 ```
 cd robot_ws/src/hec
