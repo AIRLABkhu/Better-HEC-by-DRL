@@ -379,7 +379,7 @@ def step2():
 
 
 if __name__ == "__main__":
-    actor_checkpoint = "/home/airlab/test_ws/src/Better_HEC_by_DRL/hec/python/checkpoints/actor_checkpoint"
+    actor_checkpoint = "/home/airlab/test_ws/src/Better-HEC-by-DRL/hec/python/checkpoints/actor_checkpoint"
  
     action_dim = 13
     state_dim  = 7
