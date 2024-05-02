@@ -45,6 +45,10 @@ cd ../..
 catkin build
 ```
 
+- Kinova Gen3 Lite end-effector weights are [here](https://drive.google.com/drive/u/1/folders/1eSech0IvzmTBDrLPPm-NSky1l2skHeAF).
+- You should move the weights to DenseFusion_Pytorch_1_0/weights/dis.
+
+
 ## 2. Running the code
 
 ### 2.1 Gazebo simulation
@@ -72,6 +76,7 @@ cd robot_ws/src/Better_HEC_by_DRL
 ./DenseFusion_Pytorch_1_0/tools/train.sh
 ```
 We use Kinova Gen3 Lite manipulator and DenseFusion for posenet.
+
 So, refer to the code to integrate your robot with the desired posenet.
 
 ## 3. License
