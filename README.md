@@ -77,7 +77,8 @@ So, refer to the code to integrate your robot with the desired posenet.
 ## 3. License
 
 License under the [MIT Ricense](https://github.com/Seunghui-Shin/Better_HEC_by_DRL/blob/main/DenseFusion_Pytorch_1_0/LICENSE)
-License under the [Kinova inc](
+
+License under the [Kinova inc](https://github.com/Seunghui-Shin/Better_HEC_by_DRL/blob/main/ros_kortex/LICENSE)
 
 
 ## 4. Code reference:
