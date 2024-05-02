@@ -7,9 +7,23 @@ Our code is tested on Ubuntu 20.04 and ROS Noetic.
 
 1.1 Build Instructions
 
+- Conda environment
 ```
 conda env create -f hec.yaml
 ```
+
+- Gazebo simulation
+if you want to use kinova gen3_lite manipulator, you should follow [ros_kortex](https://github.com/Kinovarobotics/ros_kortex)
+
+- After Build ros_kortex Clone the gazebo repository and catkin make:
+'''
+mkdir catkin_ws
+cd catkin_ws
+mkdir src
+cd src
+git clone 
+cd ~/catkin_ws && catkin_make
+'''
 
 - Clone the repository and catkin build:
 ```
