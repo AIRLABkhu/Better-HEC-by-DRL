@@ -9,10 +9,7 @@ Our code is tested on Ubuntu 20.04 and ROS Noetic.
 
 ```
 conda env create -f hec.yaml
-
-
 ```
-
 
 - Clone the repository and catkin build:
 ```
