@@ -30,6 +30,7 @@ cd ~/catkin_ws && catkin_make
 ### 1.3 Pose Network and Policy
 
 If you want to use DenseFusion for pose network, yo should follow [DenseFusion](https://github.com/j96w/DenseFusion).
+
 Also, you sholud follow [Discrete SAC](https://github.com/BY571/SAC_discrete) and [Learn-to-Calibrate](https://github.com/ethz-asl/Learn-to-Calibrate/tree/master?tab=readme-ov-file) for DRL.
 
 - After Installation, Clone the repository and catkin build:
