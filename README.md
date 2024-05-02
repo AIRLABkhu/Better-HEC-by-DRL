@@ -14,7 +14,7 @@ conda env create -f hec.yaml
 
 ### 1.2 Gazebo simulation
 
-If you want to use kinova gen3_lite manipulator, you should follow [ros_kortex](https://github.com/Kinovarobotics/ros_kortex).
+If you want to use kinova gen3_lite manipulator and realsense d435, you should follow [ros_kortex](https://github.com/Kinovarobotics/ros_kortex) and [realsense](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md).
 
 - After Installation, Clone the gazebo repository and catkin make:
 ```
