@@ -20,10 +20,10 @@ If you want to use kinova gen3_lite manipulator, you should follow [ros_kortex](
 ```
 mkdir catkin_ws
 cd catkin_ws
-git clone https://github.com/Seunghui-Shin/Better_HEC_by_DRL.git
+git clone https://github.com/Seunghui-Shin/Better-HEC-by-DRL.git
 mkdir src
-mv -r Better_HEC_by_DRL/ros_kortex src/
-rm -rf Better_HEC_by_DRL/
+mv -r Better-HEC-by-DRL/ros_kortex src/
+rm -rf Better-HEC-by-DRL/
 cd ~/catkin_ws && catkin_make
 ```
 
@@ -39,8 +39,8 @@ mkdir robot_ws
 cd robot_ws
 mkdir src
 cd src
-git clone https://github.com/Seunghui-Shin/Better_HEC_by_DRL.git
-cd Better_HEC_by_DRL
+git clone https://github.com/Seunghui-Shin/Better-HEC-by-DRL.git
+cd Better-HEC-by-DRL
 rm -rf ros_kortex
 cd ../..
 catkin build
@@ -60,20 +60,20 @@ roslaunch kortex_gazebo spawn_kortex_robot_realsense.launch arm:=gen3_lite
 ### 2.2.1 Training
 ```
 conda activate hec
-cd robot_ws/src/Better_HEC_by_DRL/hec
+cd robot_ws/src/Better-HEC-by-DRL/hec
 python3 python/train_policies/RL_algo_kinova_discrete_sac.py
 ```
 ### 2.2.2 Testing
 ```
 conda activate hec
-cd robot_ws/src/Better_HEC_by_DRL/hec
+cd robot_ws/src/Better-HEC-by-DRL/hec
 python3 python/test_policies/RL_algo_test_kinova_discrete_sac.py
 ```
 
 ### 2.2 Pose Network and Robot Control
 ```
 conda activate hec
-cd robot_ws/src/Better_HEC_by_DRL
+cd robot_ws/src/Better-HEC-by-DRL
 ./DenseFusion_Pytorch_1_0/tools/train.sh
 ```
 We use Kinova Gen3 Lite manipulator and DenseFusion for posenet.
@@ -82,9 +82,9 @@ So, refer to the code to integrate your robot with the desired posenet.
 
 ## 3. License
 
-License under the [MIT Ricense](https://github.com/Seunghui-Shin/Better_HEC_by_DRL/blob/main/DenseFusion_Pytorch_1_0/LICENSE)
+License under the [MIT Ricense](https://github.com/Seunghui-Shin/Better-HEC-by-DRL/blob/main/DenseFusion_Pytorch_1_0/LICENSE)
 
-License under the [Kinova inc](https://github.com/Seunghui-Shin/Better_HEC_by_DRL/blob/main/ros_kortex/LICENSE)
+License under the [Kinova inc](https://github.com/Seunghui-Shin/Better-HEC-by-DRL/blob/main/ros_kortex/LICENSE)
 
 
 ## 4. Code reference:
