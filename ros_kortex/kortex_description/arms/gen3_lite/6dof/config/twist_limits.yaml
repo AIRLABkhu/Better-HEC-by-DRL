@@ -1,0 +1,4 @@
+maximum_linear_velocity: 3.0 #0.3
+maximum_angular_velocity: 8.5 #0.85
+maximum_linear_acceleration: 4.0 #0.4
+maximum_angular_acceleration: 4.0 #0.4

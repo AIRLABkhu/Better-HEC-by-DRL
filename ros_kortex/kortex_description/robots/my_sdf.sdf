@@ -1,0 +1,710 @@
+<sdf version="1.6">
+  <model name="gen3_lite_gen3_lite_2f">
+    <link name="base_link">
+      <inertial>
+        <pose>0.002443 0.000156 0.086167 0 -0 0</pose>
+        <mass>1.14608</mass>
+        <inertia>
+          <ixx>0.00335854</ixx>
+          <ixy>3.9e-07</ixy>
+          <ixz>0.00010989</ixz>
+          <iyy>0.003311</iyy>
+          <iyz>1.91e-06</iyz>
+          <izz>0.00077158</izz>
+        </inertia>
+      </inertial>
+      <collision name="base_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="base_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name="joint_1" type="revolute">
+      <pose>0 0 0.12825 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>shoulder_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.69</lower>
+          <upper>2.69</upper>
+          <effort>10</effort>
+          <velocity>1.6</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>0</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="shoulder_link">
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>2.5e-05 0.022135 0.099377 0 -0 0</pose>
+        <mass>0.959744</mass>
+        <inertia>
+          <ixx>0.00165947</ixx>
+          <ixy>2e-08</ixy>
+          <ixz>3.6e-07</ixz>
+          <iyy>0.00140355</iyy>
+          <iyz>0.00034927</iyz>
+          <izz>0.00089493</izz>
+        </inertia>
+      </inertial>
+      <collision name="shoulder_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/shoulder_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="shoulder_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/shoulder_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name="joint_2" type="revolute">
+      <pose>0 -0.03 0.115 1.5708 -0 0</pose>
+      <parent>shoulder_link</parent>
+      <child>arm_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.69</lower>
+          <upper>2.69</upper>
+          <effort>14</effort>
+          <velocity>1.6</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>0</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="arm_link">
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.029983 0.211548 0.045303 0 -0 0</pose>
+        <mass>1.17756</mass>
+        <inertia>
+          <ixx>0.0114928</ixx>
+          <ixy>1e-06</ixy>
+          <ixz>1.6e-07</ixz>
+          <iyy>0.00102851</iyy>
+          <iyz>0.00140765</iyz>
+          <izz>0.0113349</izz>
+        </inertia>
+      </inertial>
+      <collision name="arm_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/arm_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="arm_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/arm_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name="joint_3" type="revolute">
+      <pose>0 0.28 0 3.14159 -0 0</pose>
+      <parent>arm_link</parent>
+      <child>forearm_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.69</lower>
+          <upper>2.69</upper>
+          <effort>10</effort>
+          <velocity>1.6</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>0</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="forearm_link">
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.030156 0.095022 0.007356 0 -0 0</pose>
+        <mass>0.597677</mass>
+        <inertia>
+          <ixx>0.00163256</ixx>
+          <ixy>7.11e-06</ixy>
+          <ixz>1.54e-06</ixz>
+          <iyy>0.00029798</iyy>
+          <iyz>9.587e-05</iyz>
+          <izz>0.00169091</izz>
+        </inertia>
+      </inertial>
+      <collision name="forearm_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/forearm_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="forearm_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/forearm_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name="joint_4" type="revolute">
+      <pose>0 -0.14 0.02 1.5708 -0 0</pose>
+      <parent>forearm_link</parent>
+      <child>lower_wrist_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.59</lower>
+          <upper>2.59</upper>
+          <effort>7</effort>
+          <velocity>1.6</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>0</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="lower_wrist_link">
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.005751 0.010004 0.087192 0 -0 0</pose>
+        <mass>0.526934</mass>
+        <inertia>
+          <ixx>0.00069098</ixx>
+          <ixy>2.4e-07</ixy>
+          <ixz>0.00016483</ixz>
+          <iyy>0.00078519</iyy>
+          <iyz>7.4e-07</iyz>
+          <izz>0.00034115</izz>
+        </inertia>
+      </inertial>
+      <collision name="lower_wrist_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/lower_wrist_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="lower_wrist_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/lower_wrist_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name="joint_5" type="revolute">
+      <pose>0.0285 0 0.105 3.14159 1.57079 3.14159</pose>
+      <parent>lower_wrist_link</parent>
+      <child>upper_wrist_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.57</lower>
+          <upper>2.57</upper>
+          <effort>7</effort>
+          <velocity>1.6</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>0</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="upper_wrist_link">
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.080565 0.009804 0.018728 0 -0 0</pose>
+        <mass>0.580973</mass>
+        <inertia>
+          <ixx>0.00021268</ixx>
+          <ixy>5.21e-06</ixy>
+          <ixz>2.91e-06</ixz>
+          <iyy>0.00106371</iyy>
+          <iyz>1.1e-07</iyz>
+          <izz>0.00108465</izz>
+        </inertia>
+      </inertial>
+      <collision name="upper_wrist_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/upper_wrist_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="upper_wrist_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/arms/gen3_lite/6dof/meshes/upper_wrist_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name="joint_6" type="revolute">
+      <pose>-0.105 0 0.0285 3.14159 -1.57079 3.14159</pose>
+      <parent>upper_wrist_link</parent>
+      <child>end_effector_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.59</lower>
+          <upper>2.59</upper>
+          <effort>7</effort>
+          <velocity>3.2</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>0</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="end_effector_link">
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>4e-06 1.1e-05 0.041397 0 -0 0</pose>
+        <mass>0.1395</mass>
+        <inertia>
+          <ixx>0.00011614</ixx>
+          <ixy>1e-08</ixy>
+          <ixz>4e-08</ixz>
+          <iyy>0.00010327</iyy>
+          <iyz>0</iyz>
+          <izz>9.707e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="end_effector_link_fixed_joint_lump__gripper_base_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/grippers/gen3_lite_2f/meshes/gripper_base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="end_effector_link_fixed_joint_lump__gripper_base_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/grippers/gen3_lite_2f/meshes/gripper_base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name="left_finger_bottom_joint" type="revolute">
+      <pose>0 0.0305 0.070003 3.14159 1.57079 3.14159</pose>
+      <parent>end_effector_link</parent>
+      <child>left_finger_prox_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.96</lower>
+          <upper>0.09</upper>
+          <effort>1000</effort>
+          <velocity>1000</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>0</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="left_finger_prox_link">
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.020257 0.006348 7e-05 0 -0 0</pose>
+        <mass>0.018385</mass>
+        <inertia>
+          <ixx>2.29e-06</ixx>
+          <ixy>1.43e-06</ixy>
+          <ixz>0</ixz>
+          <iyy>4.56e-06</iyy>
+          <iyz>0</iyz>
+          <izz>4.77e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="left_finger_prox_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/grippers/gen3_lite_2f/meshes/left_finger_prox_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="left_finger_prox_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/grippers/gen3_lite_2f/meshes/left_finger_prox_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name="left_finger_tip_joint" type="revolute">
+      <pose>-0.045636 -0.020423 7e-05 0 -0 0</pose>
+      <parent>left_finger_prox_link</parent>
+      <child>left_finger_dist_link</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-0.5</lower>
+          <upper>0.21</upper>
+          <effort>1000</effort>
+          <velocity>1000</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>0</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="left_finger_dist_link">
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.018488 0.001109 0 0 -0 0</pose>
+        <mass>0.010748</mass>
+        <inertia>
+          <ixx>6.3e-07</ixx>
+          <ixy>3.2e-07</ixy>
+          <ixz>0</ixz>
+          <iyy>1.83e-06</iyy>
+          <iyz>0</iyz>
+          <izz>1.61e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="left_finger_dist_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/grippers/gen3_lite_2f/meshes/left_finger_dist_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="left_finger_dist_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/grippers/gen3_lite_2f/meshes/left_finger_dist_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name="right_finger_bottom_joint" type="revolute">
+      <pose>0 -0.030501 0.070003 3.14159 1.57079 3.14159</pose>
+      <parent>end_effector_link</parent>
+      <child>right_finger_prox_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.09</lower>
+          <upper>0.96</upper>
+          <effort>1000</effort>
+          <velocity>0.6</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>0</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="right_finger_prox_link">
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.020257 0.006348 7e-05 0 -0 0</pose>
+        <mass>0.018385</mass>
+        <inertia>
+          <ixx>2.29e-06</ixx>
+          <ixy>1.43e-06</ixy>
+          <ixz>0</ixz>
+          <iyy>4.56e-06</iyy>
+          <iyz>0</iyz>
+          <izz>4.77e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="right_finger_prox_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/grippers/gen3_lite_2f/meshes/right_finger_prox_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="right_finger_prox_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/grippers/gen3_lite_2f/meshes/right_finger_prox_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Gray</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <joint name="right_finger_tip_joint" type="revolute">
+      <pose>-0.045636 0.020423 0 0 -0 0</pose>
+      <parent>right_finger_prox_link</parent>
+      <child>right_finger_dist_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.5</lower>
+          <upper>0.21</upper>
+          <effort>1000</effort>
+          <velocity>1000</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>0</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name="right_finger_dist_link">
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.018488 0.001109 0 0 -0 0</pose>
+        <mass>0.010748</mass>
+        <inertia>
+          <ixx>6.3e-07</ixx>
+          <ixy>3.2e-07</ixy>
+          <ixz>0</ixz>
+          <iyy>1.83e-06</iyy>
+          <iyz>0</iyz>
+          <izz>1.61e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="right_finger_dist_link_collision">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/grippers/gen3_lite_2f/meshes/right_finger_dist_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="right_finger_dist_link_visual">
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://kortex_description/grippers/gen3_lite_2f/meshes/right_finger_dist_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Kortex/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

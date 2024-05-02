@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<robot name="gen3_lite_gen3_lite_2f" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- Arguments -->
+    <xacro:arg name="arm" default="gen3_lite" />
+
+    <!-- Those arguments are ignored for now on Gen3 lite because there is only one supported configuration -->
+    <xacro:arg name="dof" default="6" />
+    <xacro:arg name="vision" default="false" />
+
+    <xacro:arg name="gripper" default="gen3_lite_2f" />
+
+    <xacro:arg name="sim" default="false" />
+    <xacro:arg name="prefix" default="" />
+
+    <xacro:include filename="$(find kortex_description)/robots/kortex_robot.xacro" />
+    <xacro:load_robot arm="$(arg arm)" gripper="$(arg gripper)" dof="$(arg dof)" vision="false" sim="$(arg sim)"  prefix="$(arg prefix)" />
+    <xacro:include filename="$(find kortex_description)/realsense/D435.urdf.xacro"/>
+        <xacro:sensor_d435 name="camera" topics_ns="camera" parent="base_link" publish_pointcloud="true">
+            <origin xyz="0.3 -1.0 0.2" rpy="0 0 1.5707" />
+            <!-- <origin xyz="0.3 -0.9 0.25" rpy="0 0 1.5707" /> -->
+            <!-- <origin xyz="0.4 -0.5 0.3" rpy="0 0 1.5707" /> -->
+    </xacro:sensor_d435>  
+</robot>

@@ -1,0 +1,21 @@
+joint_names:
+  - $(arg prefix)joint_1
+  - $(arg prefix)joint_2
+  - $(arg prefix)joint_3
+  - $(arg prefix)joint_4
+  - $(arg prefix)joint_5
+  - $(arg prefix)joint_6
+maximum_velocities:
+  - 5.0 #0.5
+  - 5.0 #0.5
+  - 5.0 #0.5
+  - 5.0 #0.5
+  - 5.0 #0.5
+  - 5.0 #0.5
+maximum_accelerations:
+  - 10.0 #1.0
+  - 5.0 #0.5
+  - 4.0 #0.4
+  - 10.0 #1.0
+  - 100.0 #10.0
+  - 100.0 #10.0
