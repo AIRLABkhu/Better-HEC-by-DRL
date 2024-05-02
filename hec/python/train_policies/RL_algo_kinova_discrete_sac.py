@@ -379,7 +379,7 @@ def step2():
 
 
 if __name__ == "__main__":
-    actor_checkpoint = "/home/airlab/robot_ws/src/franka_cal_sim_single/python/checkpoints/actor_checkpoint"
+    actor_checkpoint = "/home/airlab/test_ws/src/Better_HEC_by_DRL/hec/python/checkpoints/actor_checkpoint"
  
     action_dim = 13
     state_dim  = 7
@@ -394,7 +394,6 @@ if __name__ == "__main__":
     max_steps   = 10
     frame_idx   = 0
     rewards     = []
-
     reward_list = []
     episode = 0
 
