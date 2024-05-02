@@ -27,7 +27,7 @@ rm -rf Better-HEC-by-DRL/
 cd ~/catkin_ws && catkin_make
 ```
 
-### 1.3 Pose Network and Policy
+### 1.3 Pose Network and DRL
 
 If you want to use DenseFusion for pose network, yo should follow [DenseFusion](https://github.com/j96w/DenseFusion).
 
@@ -57,13 +57,13 @@ catkin build
 roslaunch kortex_gazebo spawn_kortex_robot_realsense.launch arm:=gen3_lite
 ```
    
-### 2.2.1 Training
+### 2.2.1 Training Policy
 ```
 conda activate hec
 cd robot_ws/src/Better-HEC-by-DRL/hec
 python3 python/train_policies/RL_algo_kinova_discrete_sac.py
 ```
-### 2.2.2 Testing
+### 2.2.2 Testing Policy
 ```
 conda activate hec
 cd robot_ws/src/Better-HEC-by-DRL/hec
