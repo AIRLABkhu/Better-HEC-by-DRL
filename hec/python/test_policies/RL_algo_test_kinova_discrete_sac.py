@@ -372,7 +372,7 @@ def step2():
 
 
 if __name__ == "__main__":
-    actor_checkpoint = "/home/airlab/robot_ws/src/franka_cal_sim_single/python/checkpoints/[12_21]discrete_sac_dope_add_action_0.002_2_50k/actor_checkpoint"
+    actor_checkpoint = "/home/airlab/test_ws/src/Better-HEC-by-DRL/hec/python/checkpoints/actor_checkpoint"
 
 
     action_dim = 13
