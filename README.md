@@ -93,7 +93,7 @@ Our code is based on the following repositories:
 
 - [ros_kortex](https://github.com/Kinovarobotics/ros_kortex)
 - [realsense](https://github.com/issaiass/realsense2_description)
-- [realsense sdk](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md).
+- [realsense sdk](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md)
 - [ArUco marker](https://github.com/ValerioMagnago/aruco_description)
 - [DenseFusion](https://github.com/j96w/DenseFusion)
 - [Discrete SAC](https://github.com/BY571/SAC_discrete)
