@@ -5,19 +5,26 @@
 
 Our code is tested on Ubuntu 20.04 and ROS Noetic.
 
+1.1 Build Instructions
+
+```
+conda env create -f hec.yaml
+
+
+```
+
+
 - Clone the repository and catkin build:
 ```
 mkdir robot_ws
 cd robot_ws
 mkdir src
 cd src
-git clone 
+git clone https://github.com/Seunghui-Shin/Better-HEC-by-DRL.git
 cd ../..
 catkin build
 ```
 ## 2. Running the code
-
-Integrate with your simulation to train and test the policy.
    
 ### 2.1 Training
 ```
