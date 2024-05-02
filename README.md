@@ -17,7 +17,7 @@ conda env create -f hec.yaml
 If you want to use kinova gen3_lite manipulator, you should follow [ros_kortex](https://github.com/Kinovarobotics/ros_kortex).
 
 - After Build ros_kortex Clone the gazebo repository and catkin make:
-'''
+```
 mkdir catkin_ws
 cd catkin_ws
 git clone https://github.com/Seunghui-Shin/Better_HEC_by_DRL.git
@@ -25,7 +25,7 @@ mkdir src
 cd src
 mv -r Better_HEC_by_DRL/ros_kortex src/
 cd ~/catkin_ws && catkin_make
-'''
+```
 
 ### 1.3 Pose Network and Policy
 If you want to use DenseFusion for pose network, yo should follow [DenseFusion](https://github.com/j96w/DenseFusion).
