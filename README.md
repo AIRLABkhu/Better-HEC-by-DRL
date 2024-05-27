@@ -1,5 +1,23 @@
 # Moving End-Effectors by Deep Reinforcement Learning for Better Hand-Eye Calibration Performance 
 
+## 0. Summary
+
+### Abstract
+```
+Hand-eye calibration is a crucial yet challenging task, as it necessitates precise knowledge of the pose relationship between the robot and the camera.
+This is especially true for recent markerless methods, which rely heavily on hand-eye calibration accuracy for predicting the target object’s pose.
+In this letter, we introduce an innovative approach to enhance hand-eye calibration performance by adjusting the end-effector’s pose to one with a lower pose prediction error.
+Our method begins by confirming that different poses of the object result in varying levels of error.
+Subsequently, we employ reinforcement learning to train the object to move to a pose with less error.
+We initially train 6-Degrees of Freedom (DoF) pose estimation networks using datasets collected through domain randomization in a simulated environment.
+Following this, we utilize a Discrete Soft Actor-Critic (SAC) algorithm to train an agent to determine actions that adjust the end-effector to a more accurate pose.
+Our experiments in this simulated setting demonstrate that the hand-eye calibration results achieved with our method surpass those obtained from initial poses only.
+Also, our method show that it can be applied to marker-based hand-eye calibration.
+By altering the configuration of the state and action parameters, we verify our method’s effectiveness in training scenarios.
+Furthermore, real-world experimental results affirm that our proposed method can be successfully applied to the hand-eye calibration of actual robotic systems.
+```
+### Framework
+<img width="1080" alt="main_architecture_rev" src="https://github.com/Seunghui-Shin/Better-HEC-by-DRL/assets/83438707/058de74f-adde-455e-84e9-5b8c08546091">
 
 ## 1. Usage
 
